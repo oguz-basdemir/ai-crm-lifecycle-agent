@@ -1,0 +1,19 @@
+{
+  "version": "2026-10-demo-v1",
+  "mql_score": 45,
+  "sql_score": 65,
+  "opportunity_score": 80,
+  "inactive_days": 30,
+  "risk_days": 21,
+  "new_customer_days": 30,
+  "expansion_usage": 75,
+  "icp_min_size": 50,
+  "icp_max_size": 1000,
+  "icp_industries": ["Software", "Professional Services", "Manufacturing"],
+  "weights": {
+    "demo": 20, "icp_size": 15, "icp_industry": 10,
+    "pages": 10, "downloads": 10, "opens": 5, "clicks": 10,
+    "recent": 10, "inactive": -15, "aging": -5
+  },
+  "source_points": {"Referral": 10, "Organic Search": 8, "Webinar": 8, "Paid Search": 5, "Social": 3}
+}

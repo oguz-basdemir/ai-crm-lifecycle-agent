@@ -1,0 +1,919 @@
+[
+  {
+    "contact_id": "SYN-00001",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 13,
+      "raw_value": 13,
+      "contributions": [
+        {
+          "factor": "source",
+          "points": 3,
+          "reason": "Acquisition source: Social"
+        },
+        {
+          "factor": "recent",
+          "points": 10,
+          "reason": "Active in the last 7 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Subscriber",
+    "lifecycle_reason": "Prospect has only subscription-level engagement",
+    "segments": [],
+    "action": "nurture email",
+    "action_reason": "Relevant education can build intent before sales qualification",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00002",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 0,
+      "raw_value": -12,
+      "contributions": [
+        {
+          "factor": "source",
+          "points": 3,
+          "reason": "Acquisition source: Social"
+        },
+        {
+          "factor": "inactive",
+          "points": -15,
+          "reason": "No activity for at least 30 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Lead",
+    "lifecycle_reason": "Prospect has measurable activity below the MQL threshold",
+    "segments": [
+      "inactive leads"
+    ],
+    "action": "reactivation",
+    "action_reason": "Address inactivity or retention risk with a helpful reactivation message",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00003",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 63,
+      "raw_value": 63,
+      "contributions": [
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "source",
+          "points": 3,
+          "reason": "Acquisition source: Social"
+        },
+        {
+          "factor": "recent",
+          "points": 10,
+          "reason": "Active in the last 7 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "MQL",
+    "lifecycle_reason": "Marketing qualification score threshold reached",
+    "segments": [],
+    "action": "nurture email",
+    "action_reason": "Relevant education can build intent before sales qualification",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00004",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 65,
+      "raw_value": 65,
+      "contributions": [
+        {
+          "factor": "demo",
+          "points": 20,
+          "reason": "Demo requested: explicit buying intent"
+        },
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "source",
+          "points": 10,
+          "reason": "Acquisition source: Referral"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "SQL",
+    "lifecycle_reason": "Demo requested and SQL threshold reached",
+    "segments": [
+      "high-intent prospects"
+    ],
+    "action": "sales outreach",
+    "action_reason": "Qualified demo intent merits a human sales conversation",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00005",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 100,
+      "raw_value": 100,
+      "contributions": [
+        {
+          "factor": "demo",
+          "points": 20,
+          "reason": "Demo requested: explicit buying intent"
+        },
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "clicks",
+          "points": 10,
+          "reason": "At least 2 email clicks"
+        },
+        {
+          "factor": "source",
+          "points": 10,
+          "reason": "Acquisition source: Referral"
+        },
+        {
+          "factor": "recent",
+          "points": 10,
+          "reason": "Active in the last 7 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Opportunity",
+    "lifecycle_reason": "Demo requested and opportunity score threshold reached (simulated deal proxy)",
+    "segments": [
+      "high-intent prospects"
+    ],
+    "action": "sales outreach",
+    "action_reason": "Qualified demo intent merits a human sales conversation",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00006",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 78,
+      "raw_value": 78,
+      "contributions": [
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "clicks",
+          "points": 10,
+          "reason": "At least 2 email clicks"
+        },
+        {
+          "factor": "source",
+          "points": 8,
+          "reason": "Acquisition source: Organic Search"
+        },
+        {
+          "factor": "recent",
+          "points": 10,
+          "reason": "Active in the last 7 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Customer",
+    "lifecycle_reason": "Active customer without configured risk signals",
+    "segments": [],
+    "action": "product education",
+    "action_reason": "Provide practical adoption guidance for a healthy customer",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00007",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 53,
+      "raw_value": 53,
+      "contributions": [
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "clicks",
+          "points": 10,
+          "reason": "At least 2 email clicks"
+        },
+        {
+          "factor": "source",
+          "points": 8,
+          "reason": "Acquisition source: Organic Search"
+        },
+        {
+          "factor": "inactive",
+          "points": -15,
+          "reason": "No activity for at least 30 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "At Risk",
+    "lifecycle_reason": "Customer has inactivity, declining usage, or elevated support needs",
+    "segments": [
+      "churn-risk customers"
+    ],
+    "action": "reactivation",
+    "action_reason": "Address inactivity or retention risk with a helpful reactivation message",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00008",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 53,
+      "raw_value": 53,
+      "contributions": [
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "clicks",
+          "points": 10,
+          "reason": "At least 2 email clicks"
+        },
+        {
+          "factor": "source",
+          "points": 8,
+          "reason": "Acquisition source: Organic Search"
+        },
+        {
+          "factor": "inactive",
+          "points": -15,
+          "reason": "No activity for at least 30 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Churned",
+    "lifecycle_reason": "Churned customer is not eligible for win-back",
+    "segments": [],
+    "action": "no action",
+    "action_reason": "Communication suppressed by consent, unsubscribe, or win-back eligibility",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00009",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 53,
+      "raw_value": 53,
+      "contributions": [
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "clicks",
+          "points": 10,
+          "reason": "At least 2 email clicks"
+        },
+        {
+          "factor": "source",
+          "points": 8,
+          "reason": "Acquisition source: Organic Search"
+        },
+        {
+          "factor": "inactive",
+          "points": -15,
+          "reason": "No activity for at least 30 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Win-back",
+    "lifecycle_reason": "Churned customer is eligible for a consented win-back journey",
+    "segments": [
+      "win-back candidates"
+    ],
+    "action": "reactivation",
+    "action_reason": "Address inactivity or retention risk with a helpful reactivation message",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00010",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 13,
+      "raw_value": 13,
+      "contributions": [
+        {
+          "factor": "source",
+          "points": 3,
+          "reason": "Acquisition source: Social"
+        },
+        {
+          "factor": "recent",
+          "points": 10,
+          "reason": "Active in the last 7 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Subscriber",
+    "lifecycle_reason": "Prospect has only subscription-level engagement",
+    "segments": [],
+    "action": "nurture email",
+    "action_reason": "Relevant education can build intent before sales qualification",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00011",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 0,
+      "raw_value": -12,
+      "contributions": [
+        {
+          "factor": "source",
+          "points": 3,
+          "reason": "Acquisition source: Social"
+        },
+        {
+          "factor": "inactive",
+          "points": -15,
+          "reason": "No activity for at least 30 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Lead",
+    "lifecycle_reason": "Prospect has measurable activity below the MQL threshold",
+    "segments": [
+      "inactive leads"
+    ],
+    "action": "reactivation",
+    "action_reason": "Address inactivity or retention risk with a helpful reactivation message",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00012",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 63,
+      "raw_value": 63,
+      "contributions": [
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "source",
+          "points": 3,
+          "reason": "Acquisition source: Social"
+        },
+        {
+          "factor": "recent",
+          "points": 10,
+          "reason": "Active in the last 7 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "MQL",
+    "lifecycle_reason": "Marketing qualification score threshold reached",
+    "segments": [],
+    "action": "nurture email",
+    "action_reason": "Relevant education can build intent before sales qualification",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00013",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 65,
+      "raw_value": 65,
+      "contributions": [
+        {
+          "factor": "demo",
+          "points": 20,
+          "reason": "Demo requested: explicit buying intent"
+        },
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "source",
+          "points": 10,
+          "reason": "Acquisition source: Referral"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "SQL",
+    "lifecycle_reason": "Demo requested and SQL threshold reached",
+    "segments": [
+      "high-intent prospects"
+    ],
+    "action": "sales outreach",
+    "action_reason": "Qualified demo intent merits a human sales conversation",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00014",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 100,
+      "raw_value": 100,
+      "contributions": [
+        {
+          "factor": "demo",
+          "points": 20,
+          "reason": "Demo requested: explicit buying intent"
+        },
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "clicks",
+          "points": 10,
+          "reason": "At least 2 email clicks"
+        },
+        {
+          "factor": "source",
+          "points": 10,
+          "reason": "Acquisition source: Referral"
+        },
+        {
+          "factor": "recent",
+          "points": 10,
+          "reason": "Active in the last 7 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Opportunity",
+    "lifecycle_reason": "Demo requested and opportunity score threshold reached (simulated deal proxy)",
+    "segments": [
+      "high-intent prospects"
+    ],
+    "action": "sales outreach",
+    "action_reason": "Qualified demo intent merits a human sales conversation",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00015",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 78,
+      "raw_value": 78,
+      "contributions": [
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "clicks",
+          "points": 10,
+          "reason": "At least 2 email clicks"
+        },
+        {
+          "factor": "source",
+          "points": 8,
+          "reason": "Acquisition source: Organic Search"
+        },
+        {
+          "factor": "recent",
+          "points": 10,
+          "reason": "Active in the last 7 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Customer",
+    "lifecycle_reason": "Active customer without configured risk signals",
+    "segments": [
+      "new customers",
+      "expansion candidates"
+    ],
+    "action": "product education",
+    "action_reason": "Recent customers benefit from activation and onboarding",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00016",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 53,
+      "raw_value": 53,
+      "contributions": [
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "clicks",
+          "points": 10,
+          "reason": "At least 2 email clicks"
+        },
+        {
+          "factor": "source",
+          "points": 8,
+          "reason": "Acquisition source: Organic Search"
+        },
+        {
+          "factor": "inactive",
+          "points": -15,
+          "reason": "No activity for at least 30 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "At Risk",
+    "lifecycle_reason": "Customer has inactivity, declining usage, or elevated support needs",
+    "segments": [
+      "churn-risk customers"
+    ],
+    "action": "reactivation",
+    "action_reason": "Address inactivity or retention risk with a helpful reactivation message",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00017",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 53,
+      "raw_value": 53,
+      "contributions": [
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "clicks",
+          "points": 10,
+          "reason": "At least 2 email clicks"
+        },
+        {
+          "factor": "source",
+          "points": 8,
+          "reason": "Acquisition source: Organic Search"
+        },
+        {
+          "factor": "inactive",
+          "points": -15,
+          "reason": "No activity for at least 30 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Churned",
+    "lifecycle_reason": "Churned customer is not eligible for win-back",
+    "segments": [],
+    "action": "no action",
+    "action_reason": "Communication suppressed by consent, unsubscribe, or win-back eligibility",
+    "suppressed": false
+  },
+  {
+    "contact_id": "SYN-00018",
+    "as_of": "2026-10-01",
+    "policy_version": "2026-10-demo-v1",
+    "score": {
+      "value": 53,
+      "raw_value": 53,
+      "contributions": [
+        {
+          "factor": "icp_size",
+          "points": 15,
+          "reason": "Company size matches the ideal customer profile"
+        },
+        {
+          "factor": "icp_industry",
+          "points": 10,
+          "reason": "Industry matches the ideal customer profile"
+        },
+        {
+          "factor": "pages",
+          "points": 10,
+          "reason": "At least 10 website pages viewed"
+        },
+        {
+          "factor": "downloads",
+          "points": 10,
+          "reason": "At least 2 content downloads"
+        },
+        {
+          "factor": "opens",
+          "points": 5,
+          "reason": "At least 3 email opens (weak signal)"
+        },
+        {
+          "factor": "clicks",
+          "points": 10,
+          "reason": "At least 2 email clicks"
+        },
+        {
+          "factor": "source",
+          "points": 8,
+          "reason": "Acquisition source: Organic Search"
+        },
+        {
+          "factor": "inactive",
+          "points": -15,
+          "reason": "No activity for at least 30 days"
+        }
+      ],
+      "model": "deterministic-v1"
+    },
+    "lifecycle": "Win-back",
+    "lifecycle_reason": "Churned customer is eligible for a consented win-back journey",
+    "segments": [
+      "win-back candidates"
+    ],
+    "action": "reactivation",
+    "action_reason": "Address inactivity or retention risk with a helpful reactivation message",
+    "suppressed": false
+  }
+]
